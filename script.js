@@ -5,6 +5,7 @@ const indentButton = document.querySelector('#indent-btn')
 const undoButton = document.querySelector('#undo-btn')
 const redoButton = document.querySelector('#redo-btn')
 const hButton = document.querySelector('#h-btn')
+const srcButton = document.querySelector('#src-btn')
 
 const txtBtn = document.querySelector('#txt-btn')
 const htmlBtn = document.querySelector('#html-btn')
@@ -22,9 +23,22 @@ txtBtn.addEventListener('click', () => {
     a.click() 
 })
 
+htmlBtn.addEventListener('click', () => {
+    const a = document.createElement('a')
+    const blob = new Blob([content.innerHTML])
+    const dataUrl = URL.createObjectURL(blob)
+    a.href = dataUrl
+    a.download = filename.value + ".html"
+    a.click() 
+})
+
 drkBtn.addEventListener('click', () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
+})
+
+srcButton.addEventListener('click', () => {
+    window.location.assign('https://github.com/HollowNexus/EzPz');
 })
 
 undoButton.addEventListener('click', () => {
@@ -53,13 +67,4 @@ indentButton.addEventListener('click', () => {
 
 hButton.addEventListener('click', () => {
     document.execCommand('heading')
-})
-
-htmlBtn.addEventListener('click', () => {
-    const a = document.createElement('a')
-    const blob = new Blob([content.innerHTML])
-    const dataUrl = URL.createObjectURL(blob)
-    a.href = dataUrl
-    a.download = filename.value + ".html"
-    a.click() 
 })
