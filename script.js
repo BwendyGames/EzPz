@@ -27,6 +27,14 @@ drkBtn.addEventListener('click', () => {
     element.classList.toggle("dark-mode");
 })
 
+undoButton.addEventListener('click', () => {
+    document.execCommand('undo')
+})
+
+redoButton.addEventListener('click', () => {
+    document.execCommand('redo')
+})
+
 boldBtn.addEventListener('click', () => {
     document.execCommand('bold')
 })
@@ -45,14 +53,6 @@ indentButton.addEventListener('click', () => {
 
 hButton.addEventListener('click', () => {
     document.execCommand('heading')
-})
-
-undoButton.addEventListener('click', () => {
-    document.execCommand('undo')
-})
-
-redoButton.addEventListener('click', () => {
-    document.execCommand('redo')
 })
 
 htmlBtn.addEventListener('click', () => {
