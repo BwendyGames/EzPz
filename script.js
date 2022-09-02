@@ -38,7 +38,7 @@ drkBtn.addEventListener('click', () => {
 })
 
 srcButton.addEventListener('click', () => {
-    window.location.assign('https://github.com/HollowNexus/EzPz');
+    window.location.assign('https://gitfront.io/r/user-3101836/dQJRFYBQt69t/EzPz/');
 })
 
 undoButton.addEventListener('click', () => {
